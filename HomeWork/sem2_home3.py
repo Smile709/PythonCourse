@@ -9,3 +9,9 @@
 8
 16
 '''
+n=16
+degree=0
+
+while 2**degree<=n:
+    print(2**degree)
+    degree+=1
