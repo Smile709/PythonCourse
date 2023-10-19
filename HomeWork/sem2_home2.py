@@ -15,8 +15,13 @@ p=27
 #     if i*(s-i) == p:
 #         print(i, s-i)
 
-for a in range(1, s):
-    if a + (s - a) == s and a * (s - a) == p:
-        b = s - a
-        print(a, b)
-        break
+# for a in range(1, s):
+#     if a + (s - a) == s and a * (s - a) == p:
+#         b = s - a
+#         print(a, b)
+#         break
+
+for x in range(p+1)
+    y=s-x
+    if (x*y==p):
+    print(x,y)

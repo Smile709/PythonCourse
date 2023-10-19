@@ -13,5 +13,5 @@ n=16
 degree=0
 
 while 2**degree<=n:
-    print(2**degree)
+    print(2**degree, end=' ')
     degree+=1
