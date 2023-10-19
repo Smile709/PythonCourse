@@ -21,7 +21,7 @@ p=27
 #         print(a, b)
 #         break
 
-for x in range(p+1)
+for x in range(p+1):
     y=s-x
     if (x*y==p):
-    print(x,y)
+        print(x,y)
