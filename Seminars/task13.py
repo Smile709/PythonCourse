@@ -10,4 +10,22 @@
 Input: 6 -> -20 30 -40 50 10 -10 Output: 2
 '''
 
-arbuz = (5,)
+t = [-20,30,-40,4,7,50,10,-10,3,4,8,5,5,5,4]
+count =0
+max_days=0
+flag=False
+
+for i in range(len(t)):
+    if t[i]>0:
+        if flag:
+            count+=1
+        else:
+            flag=True
+            count=1
+    else:
+        flag=False
+        if count>max_days:
+            max_days = count
+if count>max_days:
+    max_days=count
+print(f"Самая длинная оттепель была {max_days} дней")
