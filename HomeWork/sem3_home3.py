@@ -59,7 +59,7 @@ k = 'ноутбук'
 
 # print(score)
 
-points_en = {'AEIOULNSTR': 2 ,'DG':3, 'BCMP': 4,'y'=1, 'g'=4}
+points_en = {'AEIOULNSTR': 2 ,'DG':3, 'BCMP': 4}
 
 word = input("input name ").upper()  # переводим все буквы в верхний регистр
 count = 0
