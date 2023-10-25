@@ -17,9 +17,17 @@ arr = [5, 8, 6, 4, 9, 2, 7, 3]
 На выходе: 19
 """
 arr = [5, 8, 6, 4, 9, 2, 7, 3]
-sum_max = 0
+# sum_max = 0
+# for i in range(len(arr) - 1):
+#     sum = arr[i - 1] + arr[i] + arr[i + 1]
+#     if sum > sum_max:
+#         sum_max = sum
+# print(sum_max)
+
+arr_count = list()
 for i in range(len(arr) - 1):
-    sum = arr[i - 1] + arr[i] + arr[i + 1]
-    if sum > sum_max:
-        sum_max = sum
-print(sum_max)
+    arr_count.append(arr[i - 1] + arr[i] + arr[i + 1])
+arr_count.append(arr[-2] + arr[-1] + arr[0])
+
+# Вывод максимальной урожайности, которую может собрать собирающий модуль
+print(max(arr_count))
