@@ -21,6 +21,7 @@ var3 = '2 3 4 5'
 
 set2 = set(map(int, var2.split()))
 set3 = set(map(int, var3.split()))
-res= sorted(set2.intersection(set3))
-for num in res:
-    print(num, end=' ')
+res= sorted(set2.intersection(set3)) # .intersection = &
+# for num in res:
+#     print(num, end=' ')
+print(*res) # распаковать - *
