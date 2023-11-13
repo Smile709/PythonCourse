@@ -13,4 +13,4 @@ def sum(a, b):
         return b
     else:
         return sum(a+1, b-1)
-print (sum(5, 2))
+print (sum(10, 10))

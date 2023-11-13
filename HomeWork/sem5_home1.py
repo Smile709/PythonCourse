@@ -4,11 +4,17 @@
 a = 3; b = 5 -> 243 (3⁵)
 a = 2; b = 3 -> 8 
 """
-def f(num, degree):
-    if degree <= 1:
-        return num
+# def f(num, degree):
+#     if degree <= 1:
+#         return num
+#     else:
+#         return num * f(num, degree - 1)
+
+def f(a, b):
+    if b == 0:
+        return 1
     else:
-        return num * f(num, degree - 1)
+        return a * f(a, b - 1)
 
 # a = 2
 # b = 3
