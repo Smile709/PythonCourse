@@ -13,4 +13,5 @@
 3 3 2 12 
 (каждое число вводится с новой строки)'''
 
-def semilar_num (matrix1(),matrrix2())
+def semilar_num (matr1(),matr2()):
+    
