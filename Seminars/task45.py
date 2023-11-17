@@ -11,19 +11,36 @@
 Ввод: 300
 Вывод: 220 284"""
 
-k = 300
-d = {}
-summa = 0
+# k = 300
+# d = {}
+# summa = 0
 
-for i in range(1, k):
+# for i in range(1, k):
+#     for j in range(1, i):
+#         if i % j == 0:
+#             summa += j
+#     d[i] = summa
+#     summa = 0
+# for i in range(1,k):
+#     # if d[i] in d:
+#     #     if d[d[i]]==i and d[i]!=i:
+#     #          print(i)
+#     if d.get(d[i],0)==i and d[i]!=i:
+#         print(i)
+
+k = 300 # int(input("Введите число: "))
+pairs = []
+for i in range(k):
+    sum = 0
     for j in range(1, i):
         if i % j == 0:
-            summa += j
-    d[i] = summa
-    summa = 0
-for i in range(1,k):
-    # if d[i] in d:
-    #     if d[d[i]]==i and d[i]!=i:
-    #          print(i)
-    if d.get(d[i],0)==i and d[i]!=i:
-        print(i)
+            sum += j
+    pairs.append((i, sum))
+# print(pairs)
+
+friends = set()
+for j in pairs:
+    for l in pairs:
+        if j != l and j[0] == l[1] and j[1] == l[0]:
+            friends.add(j[0])
+print(f'{friends} дружественные')
