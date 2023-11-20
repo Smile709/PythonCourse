@@ -13,3 +13,43 @@ stroka = 'пара-ра-рам рам-пам-папам па-ра-па-дам'
 На выходе:
 Парам пам-пам
 '''
+stroka = 'пара-ра-рам рам-пам-папам па-ра-па-дам'
+# def rhythm(str):
+#     str = str.split()
+#     if len(str)<=1:
+#         return 2
+#     list = []
+#     for word in str:
+#         result = 0
+#         for i in word:
+#             if i in 'аеёиоуыэюя':
+#                 result += 1
+#         list.append(result)
+#     return len(list) == list.count(list[0])
+
+# if rhythm(stroka)==2:
+#     print('Количество фраз должно быть больше одной!')
+# elif rhythm(stroka):
+#     print('Парам пам-пам')
+# else:
+#     print('Пам парам')
+
+def rhythm(str):
+    str = str.split()
+    if len(str)<=1:
+        return 2
+    list = []
+    for word in str:
+        result = 0
+        for i in word:
+            if i in 'аеёиоуыэюя':
+                result += 1
+        list.append(result)
+    return len(list) == list.count(list[0])
+
+if rhythm(stroka)==2:
+    print('Количество фраз должно быть больше одной!')
+elif rhythm(stroka):
+    print('Парам пам-пам')
+else:
+    print('Пам парам')

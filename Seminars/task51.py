@@ -9,7 +9,7 @@ values = [0, 2, 10, 6] same if same_by(lambda x: x % 2, values):
 print(‘same’) 
 else:
 print(‘different’)
-20 минут'''
+'''
 
 def same_by(characteristic, objects):
     # return list(filter(characteristic, objects))==objects
