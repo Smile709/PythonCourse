@@ -7,13 +7,14 @@
     (Например имя или фамилию человека) 
 4. Использование функций. Ваша программа не должна быть линейной
 '''
-import os
-
-def work_with_phonebook():
+# phone_book=['Иванов, Иван, 111, описание Иванова', 'Петров, Петр, 222, описание Петрова']
+# filename = open('phone_book.txt', 'a', encoding='utf-8')
+# filename.writelines(phone_book)
+def work_with_phonebook(filename):
 	
     choice=show_menu()
 
-    phone_book=read_txt('phone_book.txt')
+    phone_book=read_txt(filename)
 
     while (choice!=7):
 
@@ -50,24 +51,24 @@ def read_txt(filename):
 
     fields=['Фамилия', 'Имя', 'Телефон', 'Описание']
 
-    with open(filename,'r',encoding='utf-8') as phb:
+    with open(filename,'r', encoding='utf-8') as file:
 
-        for line in phb:
-
+        for line in file:
             record = dict(zip(fields, line.split(',')))    
             phone_book.append(record)	
 
     return phone_book
 
-def write_txt(filename , phone_book):
+def write_txt(filename, phone_book):
 
-    with open('phone_book.txt','w',encoding='utf-8') as phout:
+    with open(filename,'w',encoding='utf-8') as file:
 
         for i in range(len(phone_book)):
-
             s='' 
             for v in phone_book[i].values():
                 s+=v+','
-            phout.write(f'{s[:-1]}\n')
+            file.write(f'{s[:-1]}\n')
 
-work_with_phonebook()
+def print_result(phone_book):
+    print("ok")
+work_with_phonebook("phone_book.txt")
