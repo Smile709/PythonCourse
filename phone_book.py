@@ -71,6 +71,7 @@ def write_txt(filename, phone_book): #7.Записать программу в �
                 s+=v+','
             file.write(f'{s[:-1]}\n')
     print('Изменения внесены в файл')
+    
 def print_result(phone_book): #1.Распечатать справочник в консоль
     if len(phone_book) > 0:
         for line in phone_book:
